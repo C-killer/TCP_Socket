@@ -5,13 +5,12 @@ int main() {
     int fd = init_client_socket("127.0.0.1");
     //与服务器通信
     char buf[BUFSIZ];
-    bool continuer = true;
-    while (continuer) {
+    while (1) {
         //发送消息
         std::cout << "send>" ;
         std::cin.getline(buf, BUFSIZ);
         if (strcmp(buf, "exit") == 0) {
-            continuer = false;
+            break;
         }
         if (send(fd, buf, BUFSIZ, 0) < 0) {
             print_error("send error");
