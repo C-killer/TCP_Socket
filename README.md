@@ -20,3 +20,6 @@ int init_client_socket(const char *ip);
 
 ## python
 利用socket库实现server和client的通信，利用分段处理了接受端的粘包问题
+
+## Java
+详细注明了流的作用与用法
